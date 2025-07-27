@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extended Hamming Code</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>Extended Hamming Code</h1>
+    <div>
+        <label for="block-size">Block Size (2^n):</label>
+        <input type="number" id="block-size" min="2" max="8" value="2">
+        <button id="generate-block">Generate block</button>
+    </div>
+    <div id="block-container"></div>
+    
+    <div class="data-field">
+        <label for="sender-data">Sender Word:</label>
+        <input type="text" id="sender-data">
+        <button id="code-data" style="width: 123px;" disabled>Code</button>
+        <button id="submit-interruptions" style="width: 130x; margin-left: 5px; white-space: nowrap;" disabled>Submit Interruptions</button>
+    </div>
+    
+    <div class="data-field">
+        <label for="received-data">Receiver Word:</label>
+        <input type="text" id="received-data" readonly>
+    </div>
+
+    <div class="data-field">
+       <label for="receiver-result">Receiver Result:</label>
+       <input type="text" id="receiver-result" readonly>
+   </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+        <button id="retry-btn" style="padding: 10px 20px; font-size: 16px;">Retry</button>
+        </div>
+
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script src="scripts/main.js"></script>
+
+
+</body>
+</html>
