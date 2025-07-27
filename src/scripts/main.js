@@ -254,7 +254,7 @@ async function runPythonFunction(functionName, args = []) {
     // Initialize Pyodide once
     if (!pyodide) {
         pyodide = await loadPyodide();
-        const response = await fetch('src/scripts/main.py');
+        const response = await fetch('/extended-hamming-code/src/scripts/main.py');
         const pythonCode = await response.text();
         pyodide.runPython(pythonCode);
     }
